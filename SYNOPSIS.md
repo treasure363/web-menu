@@ -2,18 +2,20 @@
 # Language
 # Tech Stack
 # Working
-# Tables/Models
-<h2>User:</h2>
+# Database
+<h2>User Table:</h2>
+Column Overview:
 
 | Attribute             | Description                           |
 | --------------------- | ------------------------------------- |
-| `Username`            | Set to the Table Number               |
-| `Password`            | Random Hash Value                     |
-| `Cart`                | `Foreign Key` Linking `Cart` Table    |
-| `Order`               | If the last order[cart] has been placed succesfully|
-| `Amount`              | Total bill to be paid                 |
+| Username              | Set to the Table Number               |
+| Password              | Random Hash Value                     |
+| Cart                  | `Foreign Key` Linking `Cart` Table    |
+| Order                 | If the last order[cart] has been placed succesfully|
+| Amount                | Total bill to be paid                 |
 
 <table>
+    Table Overview:
     <tr>
         <th>Username
         <th>Password
@@ -38,14 +40,16 @@
 </table>
 <br>
 
-<h2>Cart:</h2>
+<h2>Cart Table:</h2>
+Column Overview:
 
 | Attribute             | Description                           |
 | --------------------- | ------------------------------------- |
-| `ID`                  | `Primary Key`                         |
-| `Items`               | `Foreign Key` Linking `Quantity` Table|
+| ID                    | `Primary Key`                         |
+| Items                 | `Foreign Key` Linking `Quantity` Table|
 
 <table>
+    Table Overview:
     <tr>
         <th>ID
         <th>Items
@@ -69,15 +73,17 @@
 </table>
 <br>
 
-<h2>Quantity:</h2>
+<h2>Quantity Table:</h2>
+Column Overview:
 
 | Attribute             | Description                           |
 | --------------------- | ------------------------------------- |
-| `ID`                  | `Primary Key`                         |
-| `Item_ID`             | `Foreign Key` Linking `Item` Table   |
-| `Quantity`            | Stores number of Items                |
+| ID                    | `Primary Key`                         |
+| Item_ID               | `Foreign Key` Linking `Item` Table   |
+| Quantity              | Stores number of Items                |
 
 <table>
+    Table Overview:
     <tr>
         <th>ID
         <th>Item_ID[Item Foreign Key]
@@ -106,19 +112,21 @@
 </table>
 <br>
 
-<h2>Item:</h2>
+<h2>Item Table:</h2>
+Column Overview:
 
 | Attribute             | Description                           |
 | --------------------- | ------------------------------------- |
-| `ID`                  | `Primary Key`                         |
-| `Name`                | Item Name                             |
-| `Description`         | Short Descrition/Ingredients Used     |
-| `Image_Path`          | Stores the Path to Item Image         |
-| `Ratings`             | Ratings of customer for current item  |
-| `Price`               | Cost of current item                  |
-| `Ordered`             | Stores number of times the Item is Ordered|
+| ID                    | `Primary Key`                         |
+| Name                  | Item Name                             |
+| Description           | Short Descrition/Ingredients Used     |
+| Image_Path            | Stores the Path to Item Image         |
+| Ratings               | Ratings of customer for current item  |
+| Price                 | Cost of current item                  |
+| Ordered               | Stores number of times the Item is Ordered|
 
 <table>
+    Table Overview:
     <tr>
         <th>ID
         <th>Name
@@ -167,16 +175,18 @@
 </table>
 <br>
 
-<h2>Category:</h2>
+<h2>Category Table:</h2>
+Column Overview:
 
 | Attribute             | Description                           |
 | --------------------- | ------------------------------------- |
-| `Name`                | Item Name                             |
-| `Description`         | Short Descrition                      |
-| `Image_Path`          | Stores the Path to Category Image     |
-| `Item_ID`             | `Foreign Key` Linking `Item` table    |
+| Name                  | Item Name                             |
+| Description           | Short Descrition                      |
+| Image_Path            | Stores the Path to Category Image     |
+| Item_ID               | `Foreign Key` Linking `Item` table    |
 
 <table>
+    Table Overview:
     <tr>
         <th>Name
         <th>Description
