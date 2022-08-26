@@ -1,10 +1,56 @@
 # Project Description
+Our Project is based on Hotel Management using Web Application. In a self-serve waiterless restaurant, you can place your order using modern technology rather than physically placing it. Our project will be using a Website to present the Menu as well as Place your Order directly without any hustle. 
+
+# Need
+* Creating potential for improvement of existing services/practice
+* Beneficial to the restaurants which lack labor services
+* Reducing time consumption for overall process
+* Minimizing the error percentage of the services
+* Better crowd control for busy hours
+* Easier to track and manage orders since we provide a Database
+* The overall process becomes more simplified
+* Go green, Reduces paper usage
+  
 # Language
+* Python
+* HTML
+* CSS
+* JavaScript
+
 # Tech Stack
+* Django Framework
+* Django Models  
+  Django Models are a level of abstraction on top of SQL that allow us to work with databases using Python classes and objects rather than direct SQL queries. We are using SQLite3 Database.
+* ReactJS
+
 # Working
+<<<<<<< HEAD
+Our project is mainly divided into 4 major Steps:
+* Reaching the website via QR Scan/Manual URL
+* Browsing through the menu virtually
+* Placing the Order	
+* Finalizing your order [Payment/Review]
+
+-Reaching the website via QR Scan/Manual URL [1 Week]  
+Customers will be able to scan the website through a QR Code placed on their Table. Otherwise, they can manually go to the provided URL on their browser.  
+
+-Browsing through the menu virtually [3 Weeks]  
+After reaching the website, users can explore different dishes according to their preference. Here we will be using a database to show different items. Users can filter, sort and select options to their preference.  
+
+-Placing the order [2 Weeks]  
+Users can add/delete items from cart which will be used to place their orders. They also have the options to modify the dish by including add-on, specific instructions and takeaway as per their preferences. They can place multiple orders.  
+
+-Finalizing your order [Payment/Review] [1 Week]  
+Users are given various payment methods to choose from. Users can submit their personal review of their experience.
+
+
+# Tables/Models
+<h2>User:</h2>
+=======
 # Database
 <h2>User Table:</h2>
 Column Overview:
+>>>>>>> 80327b8cbb1cd629e74007fa7e886976142afcb4
 
 | Attribute             | Description                           |
 | --------------------- | ------------------------------------- |
@@ -221,6 +267,7 @@ Column Overview:
 <br>
 
 # Admin Interface
+
 # Pages
 * Dashboard/Menu:  
 `localhost:port/menu/`
@@ -235,3 +282,10 @@ Column Overview:
 `localhost:port/login/`
 
 # Summary
+We will be using Python Django Framework as the base for the website which will include HTML, CSS and JavaScript Languages as well. For the Database we have Django Models which provides an abstraction for SQLite3. 
+For communication between frontend and backend, REST API will be used.
+
+
+# Challenges
+
+# Experience
