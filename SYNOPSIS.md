@@ -24,7 +24,6 @@ Our Project is based on Hotel Management using Web Application. In a self-serve 
 * ReactJS
 
 # Working
-<<<<<<< HEAD
 Our project is mainly divided into 4 major Steps:
 * Reaching the website via QR Scan/Manual URL
 * Browsing through the menu virtually
@@ -44,13 +43,9 @@ Users can add/delete items from cart which will be used to place their orders. T
 Users are given various payment methods to choose from. Users can submit their personal review of their experience.
 
 
-# Tables/Models
-<h2>User:</h2>
-=======
 # Database
 <h2>User Table:</h2>
 Column Overview:
->>>>>>> 80327b8cbb1cd629e74007fa7e886976142afcb4
 
 | Attribute             | Description                           |
 | --------------------- | ------------------------------------- |
