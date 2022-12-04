@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import Category
+from .models import Category, Item
 
 # Create your views here.
 
@@ -20,5 +20,7 @@ def category(request, category):
         "header": category
     })
 
-def item(request):
-    pass
+def item(request, category, item):
+    return render(request, "menu/item.html", {
+        "item": Item.objects.get(name=item)
+    })
