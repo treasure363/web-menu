@@ -1,0 +1,65 @@
+Category:
+
+BIGG BURGERs
+OLD SCHOOL BURGERs
+category/Old-School-Burgers.png
+
+GRILLED CHICKEN BURGERs
+Grilled & Chicken Fillet
+category/Grilled-Chicken-Burgers.png
+
+Items:
+
+American Cheese Chicken Burger
+Cheesy burger on a bed of caramelized onion and atop grilled chicken patty, BBQ sauce and gherkins.
+4.50
+159.00
+GRILLED CHICKEN BURGERs
+
+Afghani Chicken Burger
+Grilled Chicken patty along with along with Afghani sauce.
+3.90
+149.00
+GRILLED CHICKEN BURGERs
+
+Afghani Lamb Burger
+Grilled Lamb patty along with along with Afghani sauce.
+2.90
+219.00
+GRILLED CHICKEN BURGERs
+
+The Original Chicken Burger
+True to the core authentic grilled burger with 2 decks of Chicken with original legacy sauce.
+4.50
+239.00
+BIGG BURGERs
+
+The Original Lamb Burger
+True to the core authentic grilled burger with 2 decks of Lamb with original legacy sauce.
+3.60
+309.00
+BIGG BURGERs
+
+Smoked Whole Meat Burger
+A 3 decks protein nutritious
+3.00
+249.00
+BIGG BURGERs
+
+The Original Spicy Chicken Burger
+A Must Try ! Biggies Signature Burger with 2 decks of juicy tender Chicken patties drooled with the Original Spicy legacy sauce.
+4.50
+249.00
+BIGG BURGERs
+
+The Original Spicy Lamb Burger
+A Must Try ! Biggies Signature Burger with 2 decks of juicy tender Lamb patties drooled with the Original Spicy legacy sauce.
+4.10
+369.00
+BIGG BURGERs
+
+Double Beamer
+A must try burger with 2 decks of baked chicken patties drooled with the original legacy sauce.
+4.00
+159.00
+BIGG BURGERs
