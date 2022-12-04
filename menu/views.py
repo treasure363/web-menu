@@ -1,6 +1,7 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
-from .models import Category, Item
+from .models import Category, Item, Cart
 
 # Create your views here.
 
@@ -8,7 +9,6 @@ def index(request):
     return redirect(request.path + 'menu/')
 
 def menu(request):
-    user = request.user 
     categories = list(Category.objects.all())
     return render(request, "menu/index.html", {
         "categories" : categories
@@ -24,3 +24,16 @@ def item(request, category, item):
     return render(request, "menu/item.html", {
         "item": Item.objects.get(name=item)
     })
+
+def add_to_cart(request, item_id, quantity):
+    if quantity==0:
+        return HttpResponse()
+    item = Item.objects.get(pk=item_id)
+    if Cart.objects.filter(item_id=item).exists():
+        cart = Cart.objects.get(item_id=item)
+        cart.quantity = quantity
+        cart.save()
+    else:
+        cart = Cart(table = request.user, item_id=item, quantity=quantity)
+        cart.save()
+    return HttpResponse()

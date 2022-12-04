@@ -12,6 +12,16 @@
             <p class="product-description">{{item.description}}</p>
         </div>
     </div>
+    <div>
+        <center>
+            <input type="number" style="width: 100px;" id="{{ item.id }}q" value=0>
+        </center>
+        <div>
+            <div class="btn-middle">
+                <button type="button" class="btn btn-auction btn-send-comment" id="{{ item.id }}" data-toggle="modal" data-target="#create">Add to Cart</button>
+            </div>
+        </div>
+    </div>
     <hr>
     <div>
         <div class="btn-middle">
@@ -20,4 +30,18 @@
     </div>
 </div>
 
+<script>
+    console.log('running');
+    const buttons = document.getElementsByTagName("button");
+
+    const buttonPressed = e => { 
+        // console.log(`ID of ${e.target.innerHTML} is ${e.target.id}`);
+        // console.log(`ID of ${e.target.innerHTML} is ${e.target.id+'q'}`);
+        const url = window.location.origin+`/cart/add/${e.target.id}/`+document.getElementById(`${e.target.id+'q'}`).value;
+        fetch(url);
+    }
+
+    for (let button of buttons) 
+        button.addEventListener("click", buttonPressed);
+</script>
 {% endblock %}

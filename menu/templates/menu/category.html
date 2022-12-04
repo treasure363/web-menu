@@ -1,6 +1,7 @@
 {% extends "menu/layout.html" %}
 {% load static %}
 {% block body %}
+
 <nav class="navbar navbar-expand navbar-light categories nav-item">
     <div class="ml-auto nav-link" style="text-align: center;">
         Category: {{ header }}
@@ -22,9 +23,33 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item product-description">Rating: {{ item.ratings }}</li>
                     <li class="list-group-item product-description">Price: {{ item.price }}</li>
+                    <li class="list-group-item product-description">
+                        <center>
+                            <input type="number" style="width: 100px;" id="{{ item.id }}q" value=0>
+                        </center>
+                    </li>
                 </ul>
+                <div>
+                    <div class="btn-middle">
+                        <button type="button" class="btn btn-auction btn-send-comment" id="{{ item.id }}" data-toggle="modal" data-target="#create">Add to Cart</button>
+                    </div>
+                </div>
             </div>
         {% endfor %}
     </div>
 </div>
+
+<script>
+    const buttons = document.getElementsByTagName("button");
+
+    const buttonPressed = e => { 
+        // console.log(`ID of ${e.target.innerHTML} is ${e.target.id}`);
+        // console.log(`ID of ${e.target.innerHTML} is ${e.target.id+'q'}`);
+        const url = window.location.origin+`/cart/add/${e.target.id}/`+document.getElementById(`${e.target.id+'q'}`).value;
+        fetch(url);
+    }
+
+    for (let button of buttons) 
+        button.addEventListener("click", buttonPressed);
+</script>
 {% endblock %}
