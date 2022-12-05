@@ -30,15 +30,19 @@ def item(request, category, item):
     })
 
 def add_to_cart(request, item_id, quantity):
+    print("add")
     if quantity==0:
         return HttpResponse()
     item = Item.objects.get(pk=item_id)
+    print(item)
+    print(Cart.objects.filter(item_id=item).exists())
     if Cart.objects.filter(item_id=item).exists():
         cart = Cart.objects.get(item_id=item)
         cart.quantity = quantity
         cart.save()
     else:
         cart = Cart(table = request.user, item_id=item, quantity=quantity)
+        print(cart)
         cart.save()
     return HttpResponse()
 
@@ -58,12 +62,18 @@ def del_from_cart(request, item_id, quantity):
 def cart(request):
     cart = Cart.objects.filter(table=request.user)
     items = []
+    total = 0
     for c in cart:
         items.append(c.item_id)
+        total += c.item_id.price
+    total = float(total)
+    print(total)
     return render(request, "menu/category.html", {
         "items":items,
         "header": "My Cart",
-        "quantity": True
+        "quantity": True,
+        "amount": total,
+        "total": len(items)
     })
 
 def cart_all(request):
@@ -97,7 +107,6 @@ def login_view(request):
         if request.user.is_authenticated:
             return redirect('index')
         return render(request, "menu/login.html")
-
 
 def logout_view(request):
     logout(request)

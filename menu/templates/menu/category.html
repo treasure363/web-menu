@@ -3,9 +3,17 @@
 {% block body %}
 
 <nav class="navbar navbar-expand navbar-light categories nav-item">
-    <div class="ml-auto nav-link" style="text-align: center;">
-        Category: {{ header }}
+    <div class="nav-link">
+        {{ header }}
     </div>
+    {% if total %}
+        <div class="nav-link">
+            Total Amount: {{ amount }}
+        </div>
+        <div class="nav-link">
+            Total Items: {{ total }}
+        </div>
+    {% endif %}
 </nav>
 <div class="container-fluid">
     <div class="row">
@@ -36,6 +44,8 @@
                         <button type="button" class="btn btn-auction btn-send-comment" id="{{ item.id }}" data-toggle="modal" data-target="#create">Add to Cart</button>
                     </div>
                 {% endif %}
+                {% if cart %}
+                {% endif %}
             </div>
         {% endfor %}
         
@@ -48,6 +58,7 @@
     const buttonPressed = e => { 
         // console.log(`ID of ${e.target.innerHTML} is ${e.target.id}`);
         // console.log(`ID of ${e.target.innerHTML} is ${e.target.id+'q'}`);
+        console.log('adding')
         const url = window.location.origin+`/cart/add/${e.target.id}/`+document.getElementById(`${e.target.id+'q'}`).value;
         fetch(url);
     }
