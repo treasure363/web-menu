@@ -87,16 +87,15 @@ def cart_all(request):
         "quantity": True
     })
 
-def login_view(request):
-    if request.method == "POST":
+def login_view(request, username, password):
+    if request.method == "GET":
 
         # Attempt to sign user in
-        username = request.POST["username"]
-        password = request.POST["password"]
         user = authenticate(request, username=username, password=password)
         
         # Check if authentication successful
         if user is not None:
+
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
