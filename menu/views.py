@@ -37,3 +37,15 @@ def add_to_cart(request, item_id, quantity):
         cart = Cart(table = request.user, item_id=item, quantity=quantity)
         cart.save()
     return HttpResponse()
+
+def cart(request):
+    cart = Cart.objects.filter(table=request.user)
+    items = []
+    for c in cart:
+        items.append(c.item_id)
+    return render(request, "menu/category.html", {
+        "items":items,
+        "header": "My Cart",
+        "quantity": True
+    })
+

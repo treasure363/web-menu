@@ -1,19 +1,19 @@
 {% extends "menu/layout.html" %}
 {% load static %}
 {% block body %}
-    <div class="container-fluid">
-        <div class="row">
-            {% for category in categories %}
-                <div class="card list-details col-lg-4 col-sm-12">
+<div class="container-fluid">
+    <div class="row">
+        {% for category in categories %}
+            <div class="card list-details col-lg-4 col-sm-12">
+                <div class="card-body">
                     <div class="card-body">
-                        <div class="card-body">
-                            <a href="{% url 'category' category=category.name %}"><h5 class="card-title product-title product-description"><i>{{ category.name }}</i></h5></a>
-                        </div>
-                        <h6 class="card-subtitle mb-2 text-muted product-description"><strong>{{ category.description }}</strong></h6>
-                        <img class="img-fluid" src="{{ category.image.url }}" alt="connect" style="max-height:300px">
+                        <a href="{% url 'category' category=category.name %}"><h5 class="card-title product-title product-description"><i>{{ category.name }}</i></h5></a>
                     </div>
+                    <h6 class="card-subtitle mb-2 text-muted product-description"><strong>{{ category.description }}</strong></h6>
+                    <img class="img-fluid" src="{{ category.image.url }}" alt="connect" style="max-height:300px">
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
+</div>
 {% endblock %}

@@ -23,19 +23,22 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item product-description">Rating: {{ item.ratings }}</li>
                     <li class="list-group-item product-description">Price: {{ item.price }}</li>
-                    <li class="list-group-item product-description">
-                        <center>
-                            <input type="number" style="width: 100px;" id="{{ item.id }}q" value=0>
-                        </center>
-                    </li>
+                    {% if quantity %}
+                        <li class="list-group-item product-description">Quantity: {{ item.quantity.first.quantity }}</li>
+                    {% else %}
+                        <li class="list-group-item product-description">
+                            <center><input type="number" style="width: 100px;" id="{{ item.id }}q" value=0></center>
+                        </li>
+                    {% endif %}
                 </ul>
-                <div>
+                {% if not quantity %}
                     <div class="btn-middle">
                         <button type="button" class="btn btn-auction btn-send-comment" id="{{ item.id }}" data-toggle="modal" data-target="#create">Add to Cart</button>
                     </div>
-                </div>
+                {% endif %}
             </div>
         {% endfor %}
+        
     </div>
 </div>
 

@@ -39,7 +39,7 @@ class Table(models.Model):   #change name to Customer
         return f'{self.table.username}'
 
 class Cart(models.Model):
-    table = models.OneToOneField(User, on_delete=models.CASCADE)
+    table = models.ForeignKey(User, on_delete=models.CASCADE)
     item_id = models.ForeignKey('Item', on_delete=models.CASCADE, related_name='quantity')
     quantity = models.IntegerField(default = 0)
 
